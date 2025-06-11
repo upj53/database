@@ -63,6 +63,8 @@
     <img src="./img/01-3-car-selling.png" alt="" class="image-simple" />
   </div>
   <h2>테이블 생성하기</h2>
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-6">
   <table class="table table-striped">
     <caption>CAR 테이블의 칼럼 정보</caption>
     <thead>
@@ -110,7 +112,10 @@
       </tr>
     </tbody>
   </table>
+        </div></div>
 
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-4">
     <div class="desc">PLAYLIST 테이블을 칼럼 정보대로 생성하시오.</div>
     <div class="sqlcode">CREATE TABLE CAR (
     IDX         NUMBER          PRIMARY KEY,
@@ -119,6 +124,8 @@
     CAR_TYPE    VARCHAR2(20)    NULL,
     CAR_SELL    NUMBER          NULL
 );</div>
+        </div></div>        
+
     <h2>자료 입력하기</h2>
     <figure>
         <img src="./img/01-3-car-selling-data-1.png" alt=""
@@ -126,20 +133,29 @@
         <figcaption>입력할 자료</figcaption>
     </figure>    
 
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-4">
     <div class="desc">첫번째 자료를 입력하시오.</div>
-    <div class="sqlcode">INSERT INTO CAR (IDX, CAR_NAME, CAR_BRAND, CAR_TYPE, CAR_SELL)
+    <div class="sqlcode">INSERT INTO CAR
+(IDX, CAR_NAME, CAR_BRAND, CAR_TYPE, CAR_SELL)
 VALUES (1, '쏘렌토', '기아', 'SUV', 8796);</div>
 
     <div class="desc">두번째 자료를 입력하시오.</div>
-    <div class="sqlcode">INSERT INTO CAR (IDX, CAR_NAME, CAR_BRAND, CAR_TYPE, CAR_SELL)
+    <div class="sqlcode">INSERT INTO CAR
+(IDX, CAR_NAME, CAR_BRAND, CAR_TYPE, CAR_SELL)
 VALUES (2, '카니발', '기아', 'SUV', 7592);</div>
 
     <div class="desc">세번째 자료를 입력하시오.<br>
         세번째 자료의 자동차 판매량(PRODUCT_COUNT)은 빈값 입니다.</div>
-    <div class="sqlcode">INSERT INTO CAR (IDX, CAR_NAME, CAR_BRAND, CAR_TYPE, CAR_SELL)
+    <div class="sqlcode">INSERT INTO CAR
+(IDX, CAR_NAME, CAR_BRAND, CAR_TYPE, CAR_SELL)
 VALUES (3, '아반떼', '현대', '준중형 세단', NULL);</div>
+        </div></div>
+
 
     <h2>자료 수정하기</h2>
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-4">
     <div class="desc">첫번째 자료를 수정하시오.<br>
 IDX가 1인 자동차 판매량(CAR_SELL)을 8900으로 수정하시오.</div>
     <div class="sqlcode">UPDATE CAR SET CAR_SELL=8900 WHERE IDX=1;</div>
@@ -147,10 +163,14 @@ IDX가 1인 자동차 판매량(CAR_SELL)을 8900으로 수정하시오.</div>
     <div class="desc">두번째 자료를 수정하시오.
 IDX가 2인 자동차 판매량(CAR_SELL)을 7600으로 수정하시오.</div>
     <div class="sqlcode">UPDATE CAR SET CAR_SELL=7600 WHERE IDX=2;</div>
+        </div></div>    
 
     <h2>자료 삭제하기</h2>
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-4">
     <div class="desc">자료를 삭제하시오.<br>IDX가 2인 자료를 삭제하시오.</div>
     <div class="sqlcode">DELETE FROM PRODUCT WHERE IDX=2;</div>
+        </div></div>    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"

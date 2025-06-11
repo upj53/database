@@ -114,6 +114,8 @@
         </div>
     </div>
 
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-4">
     <div class="desc">PLAYLIST 테이블을 칼럼 정보대로 생성하시오.</div>
     <div class="sqlcode">CREATE TABLE PLAYLIST (
     IDX           NUMBER          PRIMARY KEY,
@@ -122,24 +124,36 @@
     PLAY_GENRE    VARCHAR2(10)    NULL,
     PLAY_LIKE     NUMBER          NULL
 );</div>
+        </div></div>
+
     <h2>자료 입력하기</h2>
     <figure>
         <img src="./img/01-1-melon-INSERT-1.png" alt=""
         class="image-detail">
         <figcaption>입력할 자료</figcaption>
     </figure>
+
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-4">
     <div class="desc">첫번째 자료를 입력하시오.</div>
-    <div class="sqlcode">INSERT INTO PLAYLIST (IDX, PLAY_TITLE, PLAY_ARTIST, PLAY_GENRE, PLAY_LIKE)
+    <div class="sqlcode">INSERT INTO PLAYLIST
+(IDX, PLAY_TITLE, PLAY_ARTIST, PLAY_GENRE, PLAY_LIKE)
 VALUES (1, '모르시나요', '조째즈', '발라드', 76260);</div>
     <div class="desc">두번째 자료를 입력하시오.</div>
-    <div class="sqlcode">INSERT INTO PLAYLIST (IDX, PLAY_TITLE, PLAY_ARTIST, PLAY_GENRE, PLAY_LIKE)
+    <div class="sqlcode">INSERT INTO PLAYLIST
+(IDX, PLAY_TITLE, PLAY_ARTIST, PLAY_GENRE, PLAY_LIKE)
 VALUES (2, '나는 반딧불', '황가람', '발라드', 144372);</div>
     <div class="desc">세번째 자료를 입력하시오.<br>
         세번째 자료의 좋아요 횟수(PLAY_LIKE)는 빈값 입니다.</div>
-    <div class="sqlcode">INSERT INTO PLAYLIST (IDX, PLAY_TITLE, PLAY_ARTIST, PLAY_GENRE, PLAY_LIKE)
+    <div class="sqlcode">INSERT INTO PLAYLIST
+(IDX, PLAY_TITLE, PLAY_ARTIST, PLAY_GENRE, PLAY_LIKE)
 VALUES (3, 'like JENNIE', '제니', '댄스', NULL);</div>
+        </div></div>    
+
 
     <h2>자료 수정하기</h2>
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-4">
     <div class="desc">첫번째 자료를 수정하시오.<br>
         IDX가 1인 자료의 좋아요 횟수(PLAY_LIKE)를 77777로 수정하시오.</div>
     <div class="sqlcode">UPDATE PLAYLIST SET PLAY_LIKE=77777 WHERE IDX=1;</div>
@@ -147,11 +161,17 @@ VALUES (3, 'like JENNIE', '제니', '댄스', NULL);</div>
     <div class="desc">두번째 자료를 수정하시오.<br>
         IDX가 2인 자료의 좋아요 횟수(PLAY_LIKE)를 144444로 수정하시오.</div>
     <div class="sqlcode">UPDATE PLAYLIST SET PLAY_LIKE=144444 WHERE IDX=2;</div>    
+        </div></div>
+
 
     <h2>자료 삭제하기</h2>
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-4">
     <div class="desc">자료를 삭제하시오.<br>
         IDX가 2인 자료를 삭제하시오.</div>
     <div class="sqlcode">DELETE FROM PLAYLIST WHERE IDX=2;</div>
+        </div></div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     </body>
