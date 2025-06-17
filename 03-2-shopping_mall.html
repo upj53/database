@@ -55,9 +55,9 @@
     </nav>
     <!-- Navbar 끝 -->
 
-    <h1>플레이리스트 데이터베이스를 검색하는 SQL문 작성하기</h1>
+    <h1>쇼핑몰 데이터베이스를 검색하는 SQL문 작성하기</h1>
     <div class="d-flex justify-content-center" style="font-weight:bold; margin: 30px 0 30px 0;">
-        테이블명: PLAYLIST
+        테이블명: PRODUCT
     </div>
     <div class="d-flex justify-content-center">
         <div class="col-lg-6">
@@ -74,31 +74,31 @@
                 <td>1</td>
                 <td>IDX</td>
                 <td>NUMBER</td>
-                <td>순위</td>
+                <td>순서</td>
                 </tr>
                 <tr>
                 <td>2</td>
-                <td>PLAY_TITLE</td>
+                <td>PRODUCT_NAME</td>
                 <td>VARCHAR2(40)</td>
-                <td>곡 제목</td>
+                <td>상품명</td>
                 </tr>
                 <tr>
                 <td>3</td>
-                <td>PLAY_ARTIST</td>
-                <td>VARCHAR2(30)</td>
-                <td>아티스트</td>
+                <td>PRODUCT_PRICE</td>
+                <td>NUMBER</td>
+                <td>판매 가격</td>
                 </tr>
                 <tr>
                 <td>4</td>
-                <td>PLAY_GENRE</td>
+                <td>PRODUCT_TYPE</td>
                 <td>VARCHAR2(10)</td>
-                <td>장르</td>
+                <td>상품 분류</td>
                 </tr>
                 <tr>
                 <td>5</td>
-                <td>PLAY_LIKE</td>
+                <td>PRODUCT_COUNT</td>
                 <td>NUMBER</td>
-                <td>좋아요 횟수</td>
+                <td>재고 수량</td>
                 </tr>
             </tbody>
             </table>
@@ -106,13 +106,13 @@
     </div>
 
     <figure>
-        <img src="./img/03-1-playlist-data.png" alt=""
+        <img src="./img/03-2-product-data.png" alt=""
         class="image-detail">
         <figcaption>저장된 자료</figcaption>
     </figure>
 
     <div class="d-flex justify-content-center">
-    <div class="desc">위의 그림과 같이 PLAYLIST 테이블에 자료가 저장되어 있습니다.<br>
+    <div class="desc">위의 그림과 같이 PRODUCT 테이블에 자료가 저장되어 있습니다.<br>
 아래 조건에 맞는 자료를 검색하는 SQL문을 작성하시오.</div>
     </div>
 
@@ -120,76 +120,69 @@
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
             <div class="desc">테이블의 모든 자료에 대한 모든 칼럼을 검색하시오.</div>
-            <div class="sqlcode">SELECT * FROM PLAYLIST;</div>
+            <div class="sqlcode">SELECT * FROM PRODUCT;</div>
     </div></div>
 
     <h2>자료 검색하기 ②</h2>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="desc">장르가 '댄스' 인 곡의 '곡 제목' 칼럼을 검색하시오.<br><br>
+            <div class="desc"><br><br>
                 <span style="color:blue;">※ SQL의 연산자<br>
                     같다 =<br>
                     같지 않다 !=<br><br>
                     (예)<br>
-                    - 장르가 '댄스'인 곡<br>
-                    PLAY_GENRE = '댄스'<br><br>
-                    - 장르가 '댄스'가 아닌 곡<br>
-                    PLAY_GENRE != '댄스'<br>
+                    - <br>
+                    <br><br>
+                    - <br>
+                    <br>
                 </span>
             </div>
-            <div class="sqlcode">SELECT PLAY_TITLE
-FROM PLAYLIST
-WHERE PLAY_GENRE='댄스';</div>
+            <div class="sqlcode"></div>
     </div></div>
 
     <h2>자료 검색하기 ③</h2>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="desc">좋아요 횟수가 200,000 이상인 곡에 대해 모든 칼럼의 자료를 검색하시오.<br><br>
+            <div class="desc"><br><br>
                 <span style="color:blue;">※ SQL의 연산자<br>
                     이상 >=<br>
                     이하 <=<br>
                     초과 ><br>
                     미만 <<br><br>
                     (예)<br>
-                    - 좋아요 횟수가 200,000 이상<br>
-                    PLAY_LIKE >= 200000<br><br>
-                    - 좋아요 횟수가 300,000 이하<br>
-                    PLAY_LIKE <= 300000<br><br>
-                    - 좋아요 횟수가 100,000 초과<br>
-                    PLAY_LIKE > 100000<br><br>
-                    - 좋아요 횟수가 50,000 미만<br>
-                    PLAY_LIKE < 50000
+                    - <br>
+                    <br><br>
+                    - <br>
+                    <br><br>
+                    - <br>
+                    <br><br>
+                    - <br>
+                    
                 </span>
             </div>
     </div></div>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="sqlcode">SELECT *
-FROM PLAYLIST
-WHERE PLAY_LIKE >= 200000;</div>
+            <div class="sqlcode"></div>
     </div></div>
 
     <h2>자료 검색하기 ④</h2>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="desc">좋아요 횟수가 300,000 초과인 곡에 대해 모든 칼럼의 자료를 검색해서<br>
-                좋아요 횟수 기준으로 오름차순으로 정렬하시오.</div>
+            <div class="desc"><br>
+                </div>
     </div></div>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="sqlcode">SELECT *
-FROM PLAYLIST
-WHERE PLAY_LIKE > 300000
-ORDER BY PLAY_LIKE;</div>
+            <div class="sqlcode"></div>
     </div></div>
 
 
     <h2>자료 검색하기 ⑤</h2>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="desc">좋아요 횟수가 200,000 ~ 300,000 인 곡에 대해 모든 칼럼의 자료를 검색해서<br>
-                좋아요 횟수 기준으로 내림차순으로 정렬하시오.<br><br>
+            <div class="desc"><br>
+                <br><br>
             <span style="color:blue;">※ SQL의 연산자<br>
                 BETWEEN  A  AND  B<br>
                 A 와 B 사이의 값
@@ -197,10 +190,7 @@ ORDER BY PLAY_LIKE;</div>
     </div></div>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="sqlcode">SELECT *
-FROM PLAYLIST
-WHERE PLAY_LIKE BETWEEN 200000 AND 300000
-ORDER BY PLAY_LIKE DESC;</div>
+            <div class="sqlcode"></div>
     </div></div>
 
 
@@ -213,7 +203,7 @@ ORDER BY PLAY_LIKE DESC;</div>
     <div class="d-flex justify-content-center">
         <div class="col-lg-6">
             <table class="table table-striped">
-                <caption>테이블 PLAYLIST 의 칼럼 정보</caption>
+                <caption>테이블 PRODUCT 의 칼럼 정보</caption>
                 <thead>
                     <th>순번</th>
                     <th>칼럼명</th>
@@ -224,23 +214,23 @@ ORDER BY PLAY_LIKE DESC;</div>
                 <tbody>
                 <tr>
                 <td>1</td>
-                <td>PLAYLIST_IDX</td>
+                <td>PRODUCT_IDX</td>
                 <td>NUMBER</td>
-                <td>순위</td>
+                <td>순서</td>
                 <td>기본키</td>
                 </tr>
                 <tr>
                 <td>2</td>
-                <td>PLAYLIST_TITLE</td>
+                <td>PRODUCT_NAME</td>
                 <td>VARCHAR2(40)</td>
                 <td>곡 제목</td>
                 <td></td>
                 </tr>
                 <tr>
                 <td>3</td>
-                <td>ARTIST_IDX</td>
-                <td>VARCHAR2(30)</td>
-                <td>아티스트</td>
+                <td>COMPANY_IDX</td>
+                <td>NUMBER</td>
+                <td>회사</td>
                 <td>외래키</td>
                 </tr>
             </tbody>
@@ -252,7 +242,7 @@ ORDER BY PLAY_LIKE DESC;</div>
     <div class="d-flex justify-content-center">
         <div class="col-lg-6">
             <table class="table table-striped">
-                <caption>테이블 ARTIST 의 칼럼 정보</caption>
+                <caption>테이블 COMPANY 의 칼럼 정보</caption>
                 <thead>
                     <th>순번</th>
                     <th>칼럼명</th>
@@ -263,23 +253,23 @@ ORDER BY PLAY_LIKE DESC;</div>
                 <tbody>
                 <tr>
                 <td>1</td>
-                <td>ARTIST_IDX</td>
+                <td>COMPANY_IDX</td>
                 <td>NUMBER</td>
                 <td>순번</td>
                 <td>기본키</td>
                 </tr>
                 <tr>
                 <td>2</td>
-                <td>ARTIST_NAME</td>
+                <td>COMPANY_NAME</td>
                 <td>VARCHAR2(40)</td>
-                <td>아티스트 이름</td>
+                <td>회사 이름</td>
                 <td></td>
                 </tr>
                 <tr>
                 <td>3</td>
-                <td>ARTIST_DEBUT</td>
-                <td>DATE</td>
-                <td>아티스트 데뷔 날짜</td>
+                <td>COMPANY_EMAIL</td>
+                <td>VARCHAR2(40)</td>
+                <td>회사 이메일</td>
                 <td></td>
                 </tr>
             </tbody>
@@ -288,16 +278,16 @@ ORDER BY PLAY_LIKE DESC;</div>
     </div>
 
     <figure>
-        <img src="./img/03-1-playlist-artist-model.png" alt=""
+        <img src="./img/03-2-product-company-model.png" alt=""
         class="image-detail">
-        <figcaption>PLAYLIST 테이블과 ARTIST 테이블의 관계모형</figcaption>
+        <figcaption>PRODUCT 테이블과 COMPANY 테이블의 관계모형</figcaption>
     </figure>
 
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="desc">위의 그림과 같이 PLAYLIST 테이블과 ARTIST 테이블이 있습니다.<br>
-PLAYLIST_IDX 칼럼과 ARTIST_IDX 칼럼은 각 테이블에서 기본키 칼럼이고,<br>
-ARTIST 테이블의 ARTIST_IDX 는 PLAYLIST 테이블에서 참조하는 외래키 칼럼입니다.<br>
+            <div class="desc">위의 그림과 같이 PRODUCT 테이블과 COMPANY 테이블이 있습니다.<br>
+PRODUCT_IDX 칼럼과 COMPANY_IDX 칼럼은 각 테이블에서 기본키 칼럼이고,<br>
+COMPANY 테이블의 COMPANY_IDX 는 PRODUCT 테이블에서 참조하는 외래키 칼럼입니다.<br>
 아래 조건에 맞는 테이블을 생성하는 SQL문을 작성하시오.</div>
     </div></div>
 
@@ -330,31 +320,21 @@ CREATE TABLE PLAYLIST (
     <h2>테이블 생성하기 ②</h2> -->
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="desc">PLAYLIST 테이블과 ARTIST 테이블의 관계모형을 참고하여<br>
+            <div class="desc">PRODUCT 테이블과 COMPANY 테이블의 관계모형을 참고하여<br>
             기본키와 외래키를 갖는 테이블 2개를 생성하는 SQL문을 작성하시오.<br>
-            PLAYLIST 테이블의 ARTIST_IDX 칼럼은<br>
+            PRODUCT 테이블의 COMPANY_IDX 칼럼은<br>
             <span style="color: red;">CASCADE 를 사용하여<br>
-            ARTIST 테이블의 자료가 삭제되면<br>
-            자동으로 PLAYLIST 테이블의 자료도 삭제되는 옵션을 적용하시오.</span></div>
+            COMPANY 테이블의 자료가 삭제되면<br>
+            자동으로 PRODUCT 테이블의 자료도 삭제되는 옵션을 적용하시오.</span></div>
     </div></div>
 
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="sqlcode">-- ARTIST 테이블 생성
-CREATE TABLE ARTIST (
-    ARTIST_IDX  NUMBER  PRIMARY KEY,
-    ARTIST_NAME VARCHAR2(40),
-    ARTIST_DEBUT DATE
-);
--- PLAYLIST 테이블 생성
-CREATE TABLE PLAYLIST (
-    PLAYLIST_IDX  NUMBER PRIMARY KEY,
-    PLAYLIST_TITLE  VARCHAR2(40),
-    ARTIST_IDX  NUMBER,
-    CONSTRAINT FK_ARTIST FOREIGN KEY (ARTIST_IDX)
-    REFERENCES ARTIST (ARTIST_IDX)
-    ON DELETE CASCADE
-);</div>
+            <div class="sqlcode">-- COMPANY 테이블 생성
+
+-- PRODUCT 테이블 생성
+
+</div>
     </div></div>
 
     <div class="d-flex justify-content-center">
@@ -364,45 +344,7 @@ CREATE TABLE PLAYLIST (
 
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="sqlcode">-- ARTIST 테이블에 값 넣기
-INSERT INTO ARTIST 
-(ARTIST_IDX, ARTIST_NAME)
-VALUES
-(1, '조째즈');
-INSERT INTO ARTIST 
-(ARTIST_IDX, ARTIST_NAME)
-VALUES
-(2, '황가람');
-INSERT INTO ARTIST 
-(ARTIST_IDX, ARTIST_NAME)
-VALUES
-(3, '제니');
--- PLAYLIST 테이블에 값 넣기
-INSERT INTO PLAYLIST
-(PLAYLIST_IDX, PLAYLIST_TITLE, ARTIST_IDX)
-VALUES
-(1, '모르시나요', 1);
-INSERT INTO PLAYLIST
-(PLAYLIST_IDX, PLAYLIST_TITLE, ARTIST_IDX)
-VALUES
-(2, '나는 반딧불', 2);
-INSERT INTO PLAYLIST
-(PLAYLIST_IDX, PLAYLIST_TITLE, ARTIST_IDX)
-VALUES
-(3, 'like JENNIE', 3);
-INSERT INTO PLAYLIST
-(PLAYLIST_IDX, PLAYLIST_TITLE, ARTIST_IDX)
-VALUES
-(4, 'SOLO', 3);
--- 검색하기
-SELECT PLAYLIST_IDX, PLAYLIST_TITLE, ARTIST_IDX
-FROM PLAYLIST;
-SELECT ARTIST_IDX, ARTIST_NAME
-FROM ARTIST;
--- ARTIST 테이블의 ARTIST_IDX=3 인 값 삭제하면
--- 자동으로
--- PLAYLIST 테이블의 ARTIST_IDX=3 인 값이 삭제된다.
-DELETE FROM ARTIST WHERE ARTIST_IDX=3;</div>
+            <div class="sqlcode"></div>
     </div></div>    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
