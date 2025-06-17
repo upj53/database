@@ -238,13 +238,6 @@ ORDER BY PLAY_LIKE DESC;</div>
                 </tr>
                 <tr>
                 <td>3</td>
-                <td>PLAYLIST_LIKE</td>
-                <td>NUMBER</td>
-                <td>좋아요 횟수</td>
-                <td></td>
-                </tr>
-                <tr>
-                <td>4</td>
                 <td>ARTIST_IDX</td>
                 <td>VARCHAR2(30)</td>
                 <td>아티스트</td>
@@ -308,7 +301,8 @@ ARTIST 테이블의 ARTIST_IDX 는 PLAYLIST 테이블에서 참조하는 외래�
 아래 조건에 맞는 테이블을 생성하는 SQL문을 작성하시오.</div>
     </div></div>
 
-    <h2>테이블 생성하기 ①</h2>
+    <h2>테이블 생성하기</h2>
+    <!-- <h2>테이블 생성하기 ①</h2>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
             <div class="desc">PLAYLIST 테이블과 ARTIST 테이블의 관계모형을 참고하여<br>
@@ -327,14 +321,13 @@ CREATE TABLE ARTIST (
 CREATE TABLE PLAYLIST (
     PLAYLIST_IDX  NUMBER PRIMARY KEY,
     PLAYLIST_TITLE  VARCHAR2(40),
-    PLAYLIST_LIKE  NUMBER,
     ARTIST_IDX  NUMBER,
     CONSTRAINT FK_ARTIST FOREIGN KEY (ARTIST_IDX)
     REFERENCES ARTIST(ARTIST_IDX)
 );</div>
     </div></div>
 
-    <h2>테이블 생성하기 ②</h2>
+    <h2>테이블 생성하기 ②</h2> -->
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
             <div class="desc">PLAYLIST 테이블과 ARTIST 테이블의 관계모형을 참고하여<br>
@@ -357,10 +350,9 @@ CREATE TABLE ARTIST (
 CREATE TABLE PLAYLIST (
     PLAYLIST_IDX  NUMBER PRIMARY KEY,
     PLAYLIST_TITLE  VARCHAR2(40),
-    PLAYLIST_LIKE  NUMBER,
     ARTIST_IDX  NUMBER,
     CONSTRAINT FK_ARTIST FOREIGN KEY (ARTIST_IDX)
-    REFERENCES ARTIST(ARTIST_IDX)
+    REFERENCES ARTIST (ARTIST_IDX)
     ON DELETE CASCADE
 );</div>
     </div></div>
