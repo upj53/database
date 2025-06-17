@@ -74,7 +74,7 @@
                 <td>1</td>
                 <td>IDX</td>
                 <td>NUMBER</td>
-                <td>순서값</td>
+                <td>순위</td>
                 </tr>
                 <tr>
                 <td>2</td>
@@ -98,7 +98,7 @@
                 <td>5</td>
                 <td>PLAY_LIKE</td>
                 <td>NUMBER</td>
-                <td>곡 좋아요 횟수</td>
+                <td>좋아요 횟수</td>
                 </tr>
             </tbody>
             </table>
@@ -119,36 +119,58 @@
     <h2>자료 검색하기 ①</h2>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="desc">테이블의 모든 자료에 대한 모든 칼럼을 조회하시오.</div>
+            <div class="desc">테이블의 모든 자료에 대한 모든 칼럼을 검색하시오.</div>
             <div class="sqlcode">SELECT * FROM PLAYLIST;</div>
     </div></div>
 
     <h2>자료 검색하기 ②</h2>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="desc">테이블의 모든 자료에 대한 모든 칼럼을 조회하시오.</div>
-            <div class="sqlcode">SELECT * FROM PLAYLIST;</div>
+            <div class="desc">장르가 '댄스' 인 곡의 '곡 제목' 칼럼을 검색하시오.</div>
+            <div class="sqlcode">SELECT PLAY_TITLE
+FROM PLAYLIST
+WHERE PLAY_GENRE='댄스';</div>
     </div></div>
 
     <h2>자료 검색하기 ③</h2>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="desc">테이블의 모든 자료에 대한 모든 칼럼을 조회하시오.</div>
-            <div class="sqlcode">SELECT * FROM PLAYLIST;</div>
+            <div class="desc">좋아요 횟수가 200,000 이상인 곡에 대해 모든 칼럼의 자료를 검색하시오.</div>
+    </div></div>
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-4">
+            <div class="sqlcode">SELECT *
+FROM PLAYLIST
+WHERE PLAY_LIKE >= 200000;</div>
     </div></div>
 
     <h2>자료 검색하기 ④</h2>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="desc">테이블의 모든 자료에 대한 모든 칼럼을 조회하시오.</div>
-            <div class="sqlcode">SELECT * FROM PLAYLIST;</div>
+            <div class="desc">좋아요 횟수가 300,000 초과인 곡에 대해 모든 칼럼의 자료를 검색해서<br>
+                좋아요 횟수 기준으로 오름차순으로 정렬하시오.</div>
     </div></div>
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-4">
+            <div class="sqlcode">SELECT *
+FROM PLAYLIST
+WHERE PLAY_LIKE > 300000
+ORDER BY PLAY_LIKE;</div>
+    </div></div>
+
 
     <h2>자료 검색하기 ⑤</h2>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="desc">테이블의 모든 자료에 대한 모든 칼럼을 조회하시오.</div>
-            <div class="sqlcode">SELECT * FROM PLAYLIST;</div>
+            <div class="desc">좋아요 횟수가 200,000 ~ 300,000 인 곡에 대해 모든 칼럼의 자료를 검색해서<br>
+                좋아요 횟수 기준으로 내림차순으로 정렬하시오.</div>
+    </div></div>
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-4">
+            <div class="sqlcode">SELECT *
+FROM PLAYLIST
+WHERE PLAY_LIKE BETWEEN 200000 AND 300000
+ORDER BY PLAY_LIKE DESC;</div>
     </div></div>
 
 
@@ -156,52 +178,131 @@
 
 
 
-    <h1>AAAA</h1>
-    <h2>자료 입력하기</h2>
+
+    <h1>기본키와 외래키</h1>
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-6">
+            <table class="table table-striped">
+                <caption>테이블 PLAYLIST 의 칼럼 정보</caption>
+                <thead>
+                    <th>순번</th>
+                    <th>칼럼명</th>
+                    <th>자료형</th>
+                    <th>설명</th>
+                    <th>키 정보</th>
+                </thead>
+                <tbody>
+                <tr>
+                <td>1</td>
+                <td>PLAYLIST_IDX</td>
+                <td>NUMBER</td>
+                <td>순위</td>
+                <td>기본키</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>PLAY_TITLE</td>
+                <td>VARCHAR2(40)</td>
+                <td>곡 제목</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>3</td>
+                <td>PLAY_LIKE</td>
+                <td>NUMBER</td>
+                <td>좋아요 횟수</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>4</td>
+                <td>ARTIST_IDX</td>
+                <td>VARCHAR2(30)</td>
+                <td>아티스트</td>
+                <td>외래키</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-6">
+            <table class="table table-striped">
+                <caption>테이블 ARTIST 의 칼럼 정보</caption>
+                <thead>
+                    <th>순번</th>
+                    <th>칼럼명</th>
+                    <th>자료형</th>
+                    <th>설명</th>
+                    <th>키 정보</th>
+                </thead>
+                <tbody>
+                <tr>
+                <td>1</td>
+                <td>ARTIST_IDX</td>
+                <td>NUMBER</td>
+                <td>순번</td>
+                <td>기본키</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>ARTIST_NAME</td>
+                <td>VARCHAR2(40)</td>
+                <td>아티스트 이름</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>3</td>
+                <td>ARTIST_DEBUT</td>
+                <td>DATE</td>
+                <td>아티스트 데뷔 날짜</td>
+                <td></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
     <figure>
-        <img src="./img/01-1-melon-INSERT-1.png" alt=""
+        <img src="./img/03-1-playlist-artist-model.png" alt=""
         class="image-detail">
-        <figcaption>입력할 자료</figcaption>
+        <figcaption>PLAYLIST 테이블과 ARTIST 테이블의 관계모형</figcaption>
     </figure>
 
     <div class="d-flex justify-content-center">
-        <div class="col-lg-4">
-    <div class="desc">첫번째 자료를 입력하시오.</div>
-    <div class="sqlcode">INSERT INTO PLAYLIST
-(IDX, PLAY_TITLE, PLAY_ARTIST, PLAY_GENRE, PLAY_LIKE)
-VALUES (1, '모르시나요', '조째즈', '발라드', 76260);</div>
-    <div class="desc">두번째 자료를 입력하시오.</div>
-    <div class="sqlcode">INSERT INTO PLAYLIST
-(IDX, PLAY_TITLE, PLAY_ARTIST, PLAY_GENRE, PLAY_LIKE)
-VALUES (2, '나는 반딧불', '황가람', '발라드', 144372);</div>
-    <div class="desc">세번째 자료를 입력하시오.<br>
-        세번째 자료의 좋아요 횟수(PLAY_LIKE)는 빈값 입니다.</div>
-    <div class="sqlcode">INSERT INTO PLAYLIST
-(IDX, PLAY_TITLE, PLAY_ARTIST, PLAY_GENRE, PLAY_LIKE)
-VALUES (3, 'like JENNIE', '제니', '댄스', NULL);</div>
-        </div></div>    
+    <div class="desc">위의 그림과 같이 PLAYLIST 테이블과 ARTIST 테이블이 있습니다.<br>
+PLAYLIST_IDX 칼럼과 ARTIST_IDX 칼럼은 각 테이블에서 기본키 칼럼이고,<br>
+ARTIST 테이블의 ARTIST_IDX 는 PLAYLIST 테이블에서 참조하는 외래키 칼럼입니다.<br>
+아래 조건에 맞는 테이블을 생성하는 SQL문을 작성하시오.<div>
+    </div>
 
-
-    <h2>자료 수정하기</h2>
+    <h2>테이블 생성하기 ①</h2>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-    <div class="desc">첫번째 자료를 수정하시오.<br>
-        IDX가 1인 자료의 좋아요 횟수(PLAY_LIKE)를 77777로 수정하시오.</div>
-    <div class="sqlcode">UPDATE PLAYLIST SET PLAY_LIKE=77777 WHERE IDX=1;</div>
-
-    <div class="desc">두번째 자료를 수정하시오.<br>
-        IDX가 2인 자료의 좋아요 횟수(PLAY_LIKE)를 144444로 수정하시오.</div>
-    <div class="sqlcode">UPDATE PLAYLIST SET PLAY_LIKE=144444 WHERE IDX=2;</div>    
-        </div></div>
-
-
-    <h2>자료 삭제하기</h2>
+            <div class="desc">PLAYLIST 테이블과 ARTIST 테이블의 관계모형을 참고하여<br>
+            기본키와 외래키를 갖는 테이블 2개를 생성하는 SQL문을 작성하시오.</div>
+    </div></div>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-    <div class="desc">자료를 삭제하시오.<br>
-        IDX가 2인 자료를 삭제하시오.</div>
-    <div class="sqlcode">DELETE FROM PLAYLIST WHERE IDX=2;</div>
-        </div></div>
+            <div class="sqlcode"></div>
+    </div></div>
+
+
+    <h2>테이블 생성하기 ②</h2>
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-4">
+            <div class="desc">PLAYLIST 테이블과 ARTIST 테이블의 관계모형을 참고하여<br>
+            기본키와 외래키를 갖는 테이블 2개를 생성하는 SQL문을 작성하시오.<br>
+            PLAYLIST 테이블의 ARTIST_IDX 칼럼은<br>
+            <span style="color: red;">CASCADE 를 사용하여<br>
+            ARTIST 테이블의 자료가 삭제되면<br>
+            자동으로 PLAYLIST 테이블의 자료도 삭제되는 옵션을 적용하시오.</span></div>
+    </div></div>
+    <div class="d-flex justify-content-center">
+        <div class="col-lg-4">
+            <div class="sqlcode"></div>
+    </div></div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
@@ -211,4 +312,24 @@ VALUES (3, 'like JENNIE', '제니', '댄스', NULL);</div>
 <!-- 
 <div class="desc"></div>
 <div class="sqlcode"></div>
+-->
+
+<!--
+(예제)
+CREATE TABLE artist (
+idx  NUMBER  PRIMARY KEY,
+aname VARCHAR2(50) NOT NULL,
+debut DATE NULL
+);
+CREATE TABLE playlist (
+idx NUMBER PRIMARY KEY,
+title VARCHAR2(100) NOT NULL,
+artist_idx  NUMBER,
+CONSTRAINT FK_ARTIST FOREIGN KEY(artist_idx)
+REFERENCES artist(idx)
+);
+
+CONSTRAINT FK_ARTIST FOREIGN KEY (ARTIST_IDX)
+REFERENCES ARTIST(IDX)
+ON DELETE CASCADE
 -->
