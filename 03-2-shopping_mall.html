@@ -126,71 +126,64 @@
     <h2>자료 검색하기 ②</h2>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="desc"><br><br>
+            <div class="desc">상품 분류가 '셔츠' 인 상품의 '상품명' 칼럼을 검색하시오.<br><br>
                 <span style="color:blue;">※ SQL의 연산자<br>
                     같다 =<br>
-                    같지 않다 !=<br><br>
-                    (예)<br>
-                    - <br>
-                    <br><br>
-                    - <br>
-                    <br>
-                </span>
+                    같지 않다 !=</span>
             </div>
-            <div class="sqlcode"></div>
+            <div class="sqlcode">SELECT PRODUCT_NAME
+FROM PRODUCT
+WHERE PRODUCT_TYPE = '셔츠';</div>
     </div></div>
 
     <h2>자료 검색하기 ③</h2>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="desc"><br><br>
+            <div class="desc">재고 수량이 100개 미만인 상품에 대해 모든 칼럼의 자료를 검색하시오.<br><br>
                 <span style="color:blue;">※ SQL의 연산자<br>
                     이상 >=<br>
                     이하 <=<br>
                     초과 ><br>
-                    미만 <<br><br>
-                    (예)<br>
-                    - <br>
-                    <br><br>
-                    - <br>
-                    <br><br>
-                    - <br>
-                    <br><br>
-                    - <br>
-                    
-                </span>
+                    미만 <</span>
             </div>
     </div></div>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="sqlcode"></div>
+            <div class="sqlcode">SELECT *
+FROM PRODUCT
+WHERE PRODUCT_COUNT < 100;</div>
     </div></div>
 
     <h2>자료 검색하기 ④</h2>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="desc"><br>
-                </div>
+            <div class="desc">재고 수량이 200개 초과인 상품에 대해 모든 칼럼의 자료를 검색해서<br>
+            재고 수량 기준으로 오름차순으로 정렬하시오.</div>
     </div></div>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="sqlcode"></div>
+            <div class="sqlcode">SELECT *
+FROM PRODUCT
+WHERE PRODUCT_COUNT > 200
+ORDER BY PRODUCT_COUNT;</div>
     </div></div>
 
 
     <h2>자료 검색하기 ⑤</h2>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="desc"><br>
-                <br><br>
+            <div class="desc">재고 수량이 100 ~ 200 인 상품에 대해 모든 칼럼의 자료를 검색해서<br>
+            재고 수량 기준으로 내림차순으로 정렬하시오.<br><br>
             <span style="color:blue;">※ SQL의 연산자<br>
                 BETWEEN  A  AND  B<br>
-                A 와 B 사이의 값
-            </span></div>
+                A 와 B 사이의 값</span></div>
     </div></div>
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
-            <div class="sqlcode"></div>
+            <div class="sqlcode">SELECT *
+FROM PRODUCT
+WHERE PRODUCT_COUNT BETWEEN 100 AND 200
+ORDER BY PRODUCT_COUNT DESC;</div>
     </div></div>
 
 
@@ -331,13 +324,23 @@ CREATE TABLE PLAYLIST (
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
             <div class="sqlcode">-- COMPANY 테이블 생성
-
+CREATE TABLE COMPANY (
+    PRODUCT_IDX     NUMBER      PRIMARY KEY,
+    PRODUCT_NAME    VARCHAR2(40),
+    COMPANY_IDX     NUMBER
+);
 -- PRODUCT 테이블 생성
-
-</div>
+CREATE TABLE PRODUCT (
+    COMPANY_IDX     NUMBER      PRIMARY KEY,
+    COMPANY_NAME    VARCHAR2(40),
+    COMPANY_EMAIL   VARCHAR2(40),
+    CONSTRAINT FK_COMPANY FOREIGN KEY (COMPANY_IDX)
+    REFERENCES COMPANY (COMPANY_IDX)
+    ON DELETE CASCADE
+);</div>
     </div></div>
 
-    <div class="d-flex justify-content-center">
+    <!-- <div class="d-flex justify-content-center">
         <div class="col-lg-4">
             <div class="desc">CASCADE 옵션에 대한 보충 설명</div>
     </div></div>
@@ -345,33 +348,8 @@ CREATE TABLE PLAYLIST (
     <div class="d-flex justify-content-center">
         <div class="col-lg-4">
             <div class="sqlcode"></div>
-    </div></div>    
+    </div></div>     -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     </body>
 </html>
-
-<!-- 
-<div class="desc"></div>
-<div class="sqlcode"></div>
--->
-
-<!--
-(예제)
-CREATE TABLE artist (
-idx  NUMBER  PRIMARY KEY,
-aname VARCHAR2(50) NOT NULL,
-debut DATE NULL
-);
-CREATE TABLE playlist (
-idx NUMBER PRIMARY KEY,
-title VARCHAR2(100) NOT NULL,
-artist_idx  NUMBER,
-CONSTRAINT FK_ARTIST FOREIGN KEY(artist_idx)
-REFERENCES artist(idx)
-);
-
-CONSTRAINT FK_ARTIST FOREIGN KEY (ARTIST_IDX)
-REFERENCES ARTIST(IDX)
-ON DELETE CASCADE
--->
