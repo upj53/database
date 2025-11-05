@@ -56,37 +56,51 @@
     </nav>
     <!-- Navbar 끝 -->
     
-<!-- <div style="white-space: pre-wrap; margin-top:30px; margin-left:50px;">SCOTT.EMP 테이블이 다음과 같이 구성되어 있을 때 예상 문제 1 ~ 3 의 작업을 수행하는 SQL문을 작성한다.
+<div style="white-space: pre-wrap; margin-top:30px; margin-left:50px;">아래와 같이 고객 정보를 저장하는 테이블이 있을 때,
+예상 문제 1 ~ 4 의 작업을 수행하는 SQL문을 작성하시오.
 
-Name     Null?    Type         
--------- -------- ------------ 
-EMPNO    NOT NULL NUMBER(4)    
-ENAME             VARCHAR2(10) 
-JOB               VARCHAR2(9)  
-MGR               NUMBER(4)    
-HIREDATE          DATE         
-SAL               NUMBER(7,2)  
-COMM              NUMBER(7,2)  
-DEPTNO            NUMBER(2) 
- [ SCOTT.EMP 테이블의 구성 ]</div> -->
+<img src="./img/_test4-exam2-customer.png" alt="테이블"
+    style="width:800px; height:auto;"></div>
 
 
     <h1>예상문제 1</h1>
-    <!-- <h2>칼럼 별칭</h2>
-    <div class="exam">별칭은 칼럼, 테이블, 서브쿼리, WHERE 절에 내가 원하는 이름(별칭, 별명)을 붙여주는 것으로 접근이 쉬워진다.<br>
-    칼럼에 별칭을 붙여줄 때는 AS 키워드를 사용한다.</div> -->
-    <!-- <h2>SQL문</h2>
-    <div class="exam">직원(SCOTT.EMP) 테이블의 칼럼명을 변경 후 조회한다.</div>
-    <img src="./img/exam-1-subquery-SQL.png" alt="예상문제1 SQL문"
-    style="width:500px; height:auto;"> -->
-    <!--<h2>실행결과</h2>
-    <img src="./img/exam-1-subquery-result.png" alt="예상문제1 실행결과"
-    style="width:800px; height:auto;"> -->
+    <h2>INNER JOIN 기본</h2>
+    <div class="exam">EMP 테이블과 DEPT 테이블을 조인하여, 모든 사원의 사원 이름, 월급, 부서 이름을 조회하는 SQL문을 작성하시오.</div>
+    <h2>SQL문</h2>
+    <img src="./img/_test3-exam-2-emp_dept-1-SQL-1.png" alt="예상문제1 SQL문"
+    style="width:500px; height:auto;">
 
-    <h1>실습 (오라클 FreeSQL)</h1>
+    <h1>예상문제 2</h1>
+    <h2>조건이 있는 JOIN</h2>
+    <div class="exam">월급이 250만원 이상인 사원을 조회하시오. 사원 이름, 월급, 부서 이름을 출력하고, 월급 기준으로 오름차순으로 정렬하시오.<br>
+    <br>
+    단, 테이블명 별칭을 사용하여 EMP 테이블은 E 로, DEPT 테이블은 D 로 나타내시오.</div>
+    <h2>SQL문</h2>
+    <img src="./img/_test3-exam-2-emp_dept-1-SQL-2.png" alt="예상문제2 SQL문"
+    style="width:500px; height:auto;">
 
-    <!-- <iframe src="https://freesql.com/?compressed_code=H4sIAAAAAAAACpVUbU%252FaUBj93qT%252F4YmfwFBEEU2mLumgmy6UEsD5eX9h2Q9AhQUGyVgms0pBlqFG00Qmneuymv2f3tv%252FsNx729JS3wZfoPf03Oc55zyPIEDx7bv3aSG1mARc05DZxn8tdKbz3MI8zzn1Nu4byDwAPOyiicFz5axSqSQluQgC4PNd3Ou4R%252BBjPVBOKlZAAHRTxTXtDhTPSXKxoBCiPR33Oui64agmz0kFUZb8pwR9VuO518oL98rDOs%252FJr0oggG1U0ZmOBx3cV2dINrdKUk6sUJ5BnZz1LZ4ri3lSkdG0zSbPZRVZJud%252FRujKxHWV50jJtCJWtEc2v8BzgtdvzJcgDgF9vo2d4zbPlaW8lK3APLwsKTL40LXHCX5b6MRCl3VAk6p9fQtOrzbLynMAMCVNMv3EMswFm59LRHBU0SmOaRrFEY0piqocPSeqk3Nfd3j4Xt8ESurZEMURWyikd2CbzRhq6ehEj0dx1DAK9CyLYlwLCSpo4hzP3eUIg8SmgX2qpwT7FIr%252FdJW8f28LiSjSN9YFXtbvQOWVLFPtu4U%252FtMNKTPuwf3bwQIfFdBpf3rLxLyk7hW0ZcL8K9nUV7zedrgbO1yY%252B7ACrCZ1agG6OcN8C3FABDxqoNUr6E%252BNzLlNOMgJqAw81smxGNZfDHlchA%252BjKROdt3DfpBX1PJaerMUbfBNYebSHmPnTrLGzLCWBZD3sd57mdTakkEQSsQ8adxsC6ewb2uIr3d8ki8d0jVaDzNvoyDJXw2G1rZLUFm8%252BEm19Kgm028aFOGl9KpVIs70RKbDTsieV0VfTxwN0WdLXReU24UfP%252BMRL62p1SMaECsx%252Ba%252Boei444ju8AfR5gdIZASgRRBDjyZJS%252FCG5DzfvKcWMiB5O6srYJvHnsQZmZ1BD%252BMmFT2nGoWj3p47%252FKNvBxxaCXsUDoJrGrmUCKdAjQxUGsEePDZ%252FjFGeyrY4yOsWejCcNVHnZmgBnI60xcrx9VlfQPEfB5iS6kEpGlb4dJWw6UtJ0M7F1YzKytApsbb7NPBMXBNo2%252ByTzg2%252BKgaPAvISAO1p%252BPjCzrtn5r2r2EgajcaGp46XRW3NKwG%252Br0vZ%252BEweU8988U3r2JlMR%252BfHVj6SvDuyP72s0bis0FkoNKxryBISvYfpGAJPNwIAAA%253D&code_language=PL_SQL&code_format=false"
-    frameborder="1" width="100%" height="800px"></iframe> -->
+    <h1>예상문제 3</h1>
+    <h2>LEFT OUTER JOIN</h2>
+    <div class="exam">모든 부서를 출력하되, 해당 부서에 사원이 없는 경우에도 부서가 출력이 되도록 SQL 문을 작성하시오.<br>
+    단, 테이블명 별칭을 사용하여 EMP 테이블은 E 로, DEPT 테이블은 D 로 나타내시오.<br>
+    <br>
+    출력 항목: 부서 이름, 사원 이름</div>
+    <h2>SQL문</h2>
+    <img src="./img/_test3-exam-2-emp_dept-1-SQL-3.png" alt="예상문제2 SQL문"
+    style="width:500px; height:auto;">
+
+    <h1>예상문제 4</h1>
+    <h2>LEFT OUTER JOIN</h2>
+    <div class="exam">모든 부서를 출력하되, 해당 부서에 사원이 없는 경우에도 부서가 출력이 되도록 SQL 문을 작성하시오.<br>
+    단, 테이블명 별칭을 사용하여 EMP 테이블은 E 로, DEPT 테이블은 D 로 나타내시오.<br>
+    <br>
+    출력 항목: 부서 이름, 사원 이름</div>
+    <h2>SQL문</h2>
+    <img src="./img/_test3-exam-2-emp_dept-1-SQL-3.png" alt="예상문제2 SQL문"
+    style="width:500px; height:auto;">
+
+    <br><br><br><br><br>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
