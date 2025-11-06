@@ -67,45 +67,69 @@
 
 
     <h1>예상문제 1</h1>
-    <h2>INNER JOIN 기본</h2>
-    <div class="exam">EMP 테이블과 DEPT 테이블을 조인하여, 모든 사원의 사원 이름, 월급, 부서 이름을 조회하는 SQL문을 작성하시오.</div>
+    <h2>윈도우 함수</h2>
+    <div class="exam">사원 정보 테이블에서 NO 라는 이름으로 순번을 붙이고, 순번이 3부터 5까지의 자료를 조회하시오.<br>
+<br>
+출력 항목(영문 칼럼명 사용): 순번(NO), 사원 이름, 사원 전화번호</div>
     <h2>SQL문</h2>
     <img src="./img/_test4-exam1-emp-1-SQL.png" alt="예상문제1 SQL문"
-    style="width:500px; height:auto;">
+    style="width:600px; height:auto;">
     <h2>실행결과</h2>
     <img src="./img/_test4-exam1-emp-1-RESULT.png" alt="예상문제1 실행결과"
-    style="width:500px; height:auto;">
+    style="width:400px; height:auto;">
 
 
     <h1>예상문제 2</h1>
-    <h2>INNER JOIN 기본</h2>
-    <div class="exam">EMP 테이블과 DEPT 테이블을 조인하여, 모든 사원의 사원 이름, 월급, 부서 이름을 조회하는 SQL문을 작성하시오.</div>
+    <h2>RANK</h2>
+    <div class="exam">사원 정보 테이블에서 다음 조건에 맞게 월급이 많은 순으로 순위를 정하시오.<br>
+<br>
+- ALL_RANK 칼럼: 동일한 순위는 동일한 값이 부여된다.<br>
+- DENSE_RANK 칼럼: 동일한 순위를 하나의 건수로 계산한다.<br>
+<br>
+출력 항목(영문 칼럼명 사용): 사원 이름, 월급, ALL_RANK 칼럼, DENSE_RANK 칼럼</div>
     <h2>SQL문</h2>
     <img src="./img/_test4-exam1-emp-2-SQL.png" alt="예상문제2 SQL문"
-    style="width:500px; height:auto;">
+    style="width:600px; height:auto;">
     <h2>실행결과</h2>
     <img src="./img/_test4-exam1-emp-2-RESULT.png" alt="예상문제2 실행결과"
-    style="width:500px; height:auto;">
+    style="width:450px; height:auto;">
 
     <h1>예상문제 3</h1>
-    <h2>INNER JOIN 기본</h2>
-    <div class="exam">EMP 테이블과 DEPT 테이블을 조인하여, 모든 사원의 사원 이름, 월급, 부서 이름을 조회하는 SQL문을 작성하시오.</div>
+    <h2>정규표현식 ①</h2>
+    <div class="exam">사원 정보 테이블의 사원 전화번호 칼럼에서 정규 표현식을 사용하여 다음과 같은 형식의 전화번호를 조회하시오.<br>
+<br>
+- 010 으로 시작한다.<br>
+- 010 뒤에 하이픈(-)이 붙는다.<br>
+- 하이픈(-) 뒤에 4자리 숫자가 붙는다.<br>
+- 숫자 뒤에 하이픈(-)이 붙는다.<br>
+- 하이픈(-) 뒤에 4자리 숫자가 붙는다.<br>
+<br>
+출력 항목(영문 칼럼명 사용): 사원 이름, 사원 전화번호
+</div>
     <h2>SQL문</h2>
     <img src="./img/_test4-exam1-emp-3-SQL.png" alt="예상문제3 SQL문"
-    style="width:500px; height:auto;">
+    style="width:600px; height:auto;">
     <h2>실행결과</h2>
     <img src="./img/_test4-exam1-emp-3-RESULT.png" alt="예상문제3 실행결과"
-    style="width:500px; height:auto;">
+    style="width:350px; height:auto;">
 
     <h1>예상문제 4</h1>
-    <h2>INNER JOIN 기본</h2>
-    <div class="exam">EMP 테이블과 DEPT 테이블을 조인하여, 모든 사원의 사원 이름, 월급, 부서 이름을 조회하는 SQL문을 작성하시오.</div>
+    <h2>정규표현식 ②</h2>
+    <div class="exam">사원 정보 테이블의 사원 이메일 칼럼에서 정규 표현식을 사용하여 다음과 같은 형식의 이메일을 조회하시오.<br>
+<br>
+- a부터 z까지 알파벳 또는 A부터 Z까지 알파벳 또는 0부터 9까지 숫자로 시작한다.<br>
+- 그 다음 이어서 @ 문자가 나온다.<br>
+- @ 문자 다음에 a부터 z까지 알파벳 또는 A부터 Z까지 알파벳 또는 0부터 9까지 숫자가 나온다.<br>
+- 그 다음에 이어서 마침표(.)가 나온다.<br>
+- 마침표(.) 다음에 a부터 z까지 알파벳 또는 A부터 Z까지 알파벳 또는 0부터 9까지 숫자가 나오며 끝난다.<br>
+<br>
+출력 항목(영문 칼럼명 사용): 사원 이름, 사원 이메일</div>
     <h2>SQL문</h2>
     <img src="./img/_test4-exam1-emp-4-SQL.png" alt="예상문제4 SQL문"
-    style="width:500px; height:auto;">
+    style="width:800px; height:auto;">
     <h2>실행결과</h2>
     <img src="./img/_test4-exam1-emp-4-RESULT.png" alt="예상문제4 실행결과"
-    style="width:500px; height:auto;">
+    style="width:400px; height:auto;">
 
     <br><br><br><br><br>
 
