@@ -46,8 +46,8 @@
                             수행평가 4
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./exam-3-final-1.html">정규표현식 : 사원 정보</a></li>
-                            <li><a class="dropdown-item" href="./exam-3-final-2.html">정규표현식 : 고객 정보</a></li>
+                            <li><a class="dropdown-item" href="./exam-3-final-1.html">고급검색 : 사원 정보</a></li>
+                            <li><a class="dropdown-item" href="./exam-3-final-2.html">고급검색 : 고객 정보</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -60,7 +60,7 @@
 예상 문제 1 ~ 3 의 작업을 수행하는 SQL문을 작성하시오.
 
 <a style="font-size: 30px; font-weight: bold; color: red;"
- href="https://freesql.com/?compressed_code=H4sIAAAAAAAACtPVVVBWVlbw8vf0e71mB5itq6vLy8XLpavr6u8MAIKz%252FTofAAAA&code_language=PL_SQL&code_format=false" target="_blank">SQL 실습하기</a>
+ href="https://freesql.com/?compressed_code=H4sIAAAAAAAACtWUz07bQBDG75b8DiPlApUdtaBeQKkEeFFTJXEaUlU98SoBTBUKEqlKGgtsSCRoQxQkQyJkpPSFPON3qPaPk5gExKWH7mm9%252B83szjc%252Fr2lCJpMBax2o7sY%252FD%252BLjgyiowTKY8MHOl7Afin3TNHVN10yhfmZICYjB42EFaLdPZ41oMAK8r5Hjib3MS3PJaIj3j8gfYniyMJ5hb38FWLG8OFcH1Ani06O46UZhALq2xQpsowqvYLNiF3nYqghTV3oqvcXK1cW5wufz87hVZRi5ddrbwX5IbQ%252Fe4F09C%252FlSiVWkP1EY4CAUwtRgxfLkMG4eTzlZId%252FhNyA%252FjJsutfoGzKbAXhd%252FtJUz5LuJRzzDL8cAOjuJwgMjKU0uq8SyNPx2AlsfC%252FzufPn8Ozm3%252FLxDj9zLrKzu3sP2FcTNG%252BxdL5DLCwV6GOHFCHv74sjT68WVF509dlHXlAVZtl1aKzIjtbK1VjDkN%252FckawmJriWN1bUpe7lC1%252BySCLW28xbkkqi8NbdDS6JD1Ami2yH5Q6DzOreBZ5u1WJbBZUtvX%252BPvI1Ui7e2QH46dn3JUWTenWy9ujjCcczdoz%252Bu6DORc0WWNvBF2PCD3kkcHXap7yVK7ie3%252Bo2am8TnsGjD9OwAOHHq4EZcQbZXopVElvwYMsOMZM8TWwOIbgLtuvFfD3eG%252F5khBk0A0%252BZwiaAYfYDMAgSURGgMkJrr2%252BT2rsFRWeJfjJPCha3bFYhVY%252F5JszsVtWeBWYJtVsD9V1alP%252FsuyTLwaTTDAhmvM6uPmEA8flJ5ajTGLQ6DWVw50dPeHTgNqNfDYUTr%252B8Mu8XIcNF48d7Pj8CYDn3oD%252FAJsUH0aaokfPToKEkcZHESJ5AF171LIEHbuk8ICcAmbVNJm98Re3Shu2aAcAAA%253D%253D&code_language=PL_SQL&code_format=false" target="_blank">SQL 실습하기</a>
 
 <img src="./img/_test3-exam-2-emp_dept-1.png" alt="테이블"
     style="width:800px; height:auto;"></div>
@@ -68,7 +68,10 @@
 
     <h1>예상문제 1</h1>
     <h2>INNER JOIN 기본</h2>
-    <div class="exam">EMP 테이블과 DEPT 테이블을 조인하여, 모든 사원의 사원 이름, 월급, 부서 이름을 조회하는 SQL문을 작성하시오.</div>
+    <div class="exam">EMP 테이블과 DEPT 테이블을 조인하여, 모든 사원의 사원 이름, 월급, 부서 이름을 조회하는 SQL문을 작성하시오.<br>
+    <br>
+    출력 항목(영문 칼럼명 사용): 사원 이름, 월급, 부서 이름 
+    </div>
     <h2>SQL문</h2>
     <!-- <div class="exam">직원(SCOTT.EMP) 테이블의 칼럼명을 변경 후 조회한다.</div> -->
     <img src="./img/_test3-exam-2-emp_dept-1-SQL-1.png" alt="예상문제1 SQL문"
@@ -77,22 +80,13 @@
     <img src="./img/_test3-exam-2-emp_dept-1-RESULT-1.png" alt="예상문제1 실행결과"
     style="width:500px; height:auto;">
 
-    <!-- <h2>칼럼 별칭</h2>
-    <div class="exam">별칭은 칼럼, 테이블, 서브쿼리, WHERE 절에 내가 원하는 이름(별칭, 별명)을 붙여주는 것으로 접근이 쉬워진다.<br>
-    칼럼에 별칭을 붙여줄 때는 AS 키워드를 사용한다.</div> -->
-    <!-- <h2>SQL문</h2>
-    <div class="exam">직원(SCOTT.EMP) 테이블의 칼럼명을 변경 후 조회한다.</div>
-    <img src="./img/exam-1-subquery-SQL.png" alt="예상문제1 SQL문"
-    style="width:500px; height:auto;"> -->
-    <!--<h2>실행결과</h2>
-    <img src="./img/exam-1-subquery-result.png" alt="예상문제1 실행결과"
-    style="width:800px; height:auto;"> -->
-
     <h1>예상문제 2</h1>
     <h2>조건이 있는 JOIN</h2>
     <div class="exam">월급이 250만원 이상인 사원을 조회하시오. 사원 이름, 월급, 부서 이름을 출력하고, 월급 기준으로 오름차순으로 정렬하시오.<br>
     <br>
-    단, 테이블명 별칭을 사용하여 EMP 테이블은 E 로, DEPT 테이블은 D 로 나타내시오.</div>
+    단, 테이블명 별칭을 사용하여 EMP 테이블은 E 로, DEPT 테이블은 D 로 나타내시오.<br>
+    <br>
+    출력 항목(영문 칼럼명 사용): 사원 이름, 월급, 부서 이름</div>
     <h2>SQL문</h2>
     <img src="./img/_test3-exam-2-emp_dept-1-SQL-2.png" alt="예상문제2 SQL문"
     style="width:500px; height:auto;">
@@ -105,7 +99,7 @@
     <div class="exam">모든 부서를 출력하되, 해당 부서에 사원이 없는 경우에도 부서가 출력이 되도록 SQL 문을 작성하시오.<br>
     단, 테이블명 별칭을 사용하여 EMP 테이블은 E 로, DEPT 테이블은 D 로 나타내시오.<br>
     <br>
-    출력 항목: 부서 이름, 사원 이름</div>
+    출력 항목(영문 칼럼명 사용): 부서 이름, 사원 이름</div>
     <h2>SQL문</h2>
     <img src="./img/_test3-exam-2-emp_dept-1-SQL-3.png" alt="예상문제3 SQL문"
     style="width:500px; height:auto;">

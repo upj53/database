@@ -46,8 +46,8 @@
                             수행평가 4
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./exam-3-final-1.html">정규표현식 : 사원 정보</a></li>
-                            <li><a class="dropdown-item" href="./exam-3-final-2.html">정규표현식 : 고객 정보</a></li>
+                            <li><a class="dropdown-item" href="./exam-3-final-1.html">고급검색 : 사원 정보</a></li>
+                            <li><a class="dropdown-item" href="./exam-3-final-2.html">고급검색 : 고객 정보</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -60,7 +60,7 @@
 예상 문제 1 ~ 3 의 작업을 수행하는 SQL문을 작성하시오.
 
 <a style="font-size: 30px; font-weight: bold; color: red;"
- href="https://freesql.com/?compressed_code=H4sIAAAAAAAACtPVVVBWVlbw8vf0e71mB5itq6vLy8XLpavr6u8MAIKz%252FTofAAAA&code_language=PL_SQL&code_format=false" target="_blank">SQL 실습하기</a>
+ href="https://freesql.com/?compressed_code=H4sIAAAAAAAACr2V30vbUBTH3wP5Hw70xY6kTH1THGgaWUdNWFIZe%252FJf6TQddQrtmFmjS1wLKrVU6GyRCNk%252F1HPu%252FzBufjWtWZmw7b709t7vOfd7z%252Fn0VpahUChAeQeo6bCvx6x1PB3VYR1keKNXNBz64b4sy6IgCnKoXjIiCYSDx8MGMPucjrzpOOAz%252FgEAhT9NFQUDa5ySN0H%252FbCWd4aCxAWZtv6xqtWKiDU9JFEC9Ebs4ZbYz9UcgCqZaVZUavIBdQ99LQjfDUHyok%252BX%252B9hilum2ahq7vFXPVyw9KgzfjCpLTpKMPOPSp68Iq3jdLUNE01YgKNvVHOPZD4dyI%252Fc5O5XdNc8%252BWybO4H%252FJ8ZjvUGUpPU%252BGgj1%252B6cW3Jc5Iq8wQ3lgR02WD2OWDDwpYlJXWNduP00XXx0xnkOH1b5ZfjwsvPZP3gPk5ccq5K0fUfXOxeA7PvcHC7Qg6vBNBjgN8DHDSADod0cVvceI6ptOSikClVyTzQtvdUaXFR1WqqEa%252BmBSwpoVgUsnCIQqYxqVQUdC1NpxxUyrA1l6dSzu30WtjptZer69iwuHH2zVpJvrLWkNn9InXa8UWZ7aYNylQ8W8i58dwWhk3gxI67OYTMhXMk6apOboA9F%252FBwgjcBjfrUdOMl6trYHS5zhyd9CbK%252FKcCxRY93oZWw4RGsTyknrw4mYM%252FNcZlLfx0UiHw67KiOh5P%252FxF5M2QJ0i7jlYgZmPmigRKilkIUTUXj3WjXUhQPg1VbIlijoRlk1YOd9Zq%252Bsmkouk%252Bshk1V1twb6fi02sOzBmI4DvA5m%252BGDbyWkMsyd48hjrOdMJyROgzkf%252Bakzvf9LFiDptzlek4387UV6uw7aDLQt7Xv4DA8temL%252BOXo6Hf8rejC5pHsWFhy7BSZqHL6YrwxGIwkKTs%252BzpWowWbMWwbcqyqiu%252FADeXmX0cCAAA&code_language=PL_SQL&code_format=false" target="_blank">SQL 실습하기</a>
 
 <img src="./img/_test3-exam-2-student_classroom-1.png" alt="테이블"
     style="width:800px; height:auto;"></div>
@@ -68,7 +68,9 @@
 
     <h1>예상문제 1</h1>
     <h2>INNER JOIN 기본</h2>
-    <div class="exam">STUDENT 테이블과 CLASSROOM 테이블을 조인하여, 모든 학생의 학생 이름, 입학 년도, 학과 이름을 조회하는 SQL문을 작성하시오.</div>
+    <div class="exam">STUDENT 테이블과 CLASSROOM 테이블을 조인하여, 모든 학생의 학생 이름, 입학 년도, 학과 이름을 조회하는 SQL문을 작성하시오.<br>
+    <br>
+    출력 항목(영문 칼럼명 사용): 학생 이름, 입학 년도, 학과 이름</div>
     <h2>SQL문</h2>
     <img src="./img/_test3-exam-2-student_classroom-SQL-1.png" alt="예상문제1 SQL문"
     style="width:500px; height:auto;">
@@ -76,22 +78,14 @@
     <img src="./img/_test3-exam-2-student_classroom-RESULT-1.png" alt="예상문제1 실행결과"
     style="width:500px; height:auto;">
 
-    <!-- <h2>칼럼 별칭</h2>
-    <div class="exam">별칭은 칼럼, 테이블, 서브쿼리, WHERE 절에 내가 원하는 이름(별칭, 별명)을 붙여주는 것으로 접근이 쉬워진다.<br>
-    칼럼에 별칭을 붙여줄 때는 AS 키워드를 사용한다.</div> -->
-    <!-- <h2>SQL문</h2>
-    <div class="exam">직원(SCOTT.EMP) 테이블의 칼럼명을 변경 후 조회한다.</div>
-    <img src="./img/exam-1-subquery-SQL.png" alt="예상문제1 SQL문"
-    style="width:500px; height:auto;"> -->
-    <!--<h2>실행결과</h2>
-    <img src="./img/exam-1-subquery-result.png" alt="예상문제1 실행결과"
-    style="width:800px; height:auto;"> -->
 
     <h1>예상문제 2</h1>
     <h2>조건이 있는 JOIN</h2>
     <div class="exam">2013년 이후(2013년 포함)에 입학한 학생을 조회하시오. 학생 이름, 입학 년도, 학과 이름을 출력하고, 입학 년도 기준으로 내림차순으로 정렬하시오.<br>
     <br>
-    단, 테이블명 별칭을 사용하여 STUDENT 테이블은 S 로, CLASSROOM 테이블은 C 로 나타내시오.</div>
+    단, 테이블명 별칭을 사용하여 STUDENT 테이블은 S 로, CLASSROOM 테이블은 C 로 나타내시오.<br>
+    <br>
+    출력 항목(영문 칼럼명 사용): 학생 이름, 입학 년도, 학과 이름</div>
     <h2>SQL문</h2>
     <img src="./img/_test3-exam-2-student_classroom-SQL-2.png" alt="예상문제2 SQL문"
     style="width:400px; height:auto;">
@@ -104,7 +98,7 @@
     <div class="exam">모든 학과를 출력하되, 해당 학과에 학생이 없는 경우에도 학과가 출력이 되도록 SQL 문을 작성하시오.<br>
     단, 테이블명 별칭을 사용하여 STUDENT 테이블은 S 로, CLASSROOM 테이블은 C 로 나타내시오.<br>
     <br>
-    출력 항목: 학과 이름, 학생 이름</div>
+    출력 항목(영문 칼럼명 사용): 학과 이름, 학생 이름</div>
     <h2>SQL문</h2>
     <img src="./img/_test3-exam-2-student_classroom-SQL-3.png" alt="예상문제3 SQL문"
     style="width:500px; height:auto;">
